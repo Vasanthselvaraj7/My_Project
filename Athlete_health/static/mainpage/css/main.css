@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    max-width: 100%;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    user-select: none;
+    background: #fff;
+
+}
+
+.logo a{
+    font-family: georgia;
+    font-size: 30px;
+    padding: 0 10px;
+    outline-style: solid;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+
+}
+.navigation a{
+    font-family: georgia;
+    position: relative;
+    left: 50px;
+    text-decoration: none;
+    font-size: 1em;
+    margin-left: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-login {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    left: 70px;
+    font-size: 1.1em;
+    padding: 5px 20px;
+    border-radius: 15px;
+    font-family: georgia;
+    background: transparent;
+    transition:0.5s;
+    cursor: pointer;
+    outline-style: solid;
+    outline-width: 1.5px;
+    outline-color: brown;
+    font-weight: bold;
+}
+
+.btn-login:hover{
+    background-color: brown;
+    color:#fff;
+    padding: 5px 20px;
+    outline-style: solid;
+}
+
+.fst-container{
+    position: relative;
+    top: 76px; 
+    min-height: 550px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+#video{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 1;
+}
+
+.mid{
+    position: relative;
+    margin-top: 75px;
+    height: 500px;
+    background-color: green;
+    z-index: 1;
+}
+/*
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background:url("/static/mainpage/images/main.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #fff;
+    font-family: georgia;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #fff;
+    font-family: georgia;
+}
+
+.role-selection {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+
+.role-card {
+    text-decoration: none;
+    color: #000;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.role-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.role-card:hover {
+    transform: scale(1.05);
+}
+*/

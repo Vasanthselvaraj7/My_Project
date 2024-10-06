@@ -1,0 +1,166 @@
+/* styles.css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding; 0;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/static/athletepage/image/back.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+
+}
+.logo
+{
+    margin: -30px;
+    font-size: 20px;
+    color:#fff;
+
+}
+
+.navigation a
+{
+    margin-left: 35px;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 100;
+    text-decoration: none;
+
+}
+.navigation a:hover{
+    color: black;
+
+}
+.container {
+    background: transparent;
+    box-shadow: 0 15px 2505px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+
+h2 {
+    margin: 0 0 20px;
+    color: #333;
+}
+
+.img{
+    background: url('/static/athletepage/image/sup.jpg');
+    box-shadow: 0 15px 2505px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    padding: none;
+    width: 500px;
+    border-radius: 0  100px 100px 0;
+
+}
+.form-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding:0px 60px;
+
+
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 30px;
+    width: 300px;
+
+
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 10px 10px 0;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+    background: transparent;
+
+}
+
+.input-container label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #333;
+    font-size: 12px;
+}
+
+.btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.message {
+    margin: 50px 0 0;
+
+}
+
+.message a {
+    color: #333;
+    transition: 2s;
+    text-decoration: none;
+}
+
+.message a:hover{
+    outline-style: solid;
+}
+
+/* Hide and show sections */
+.hidden {
+    display: none;
+}

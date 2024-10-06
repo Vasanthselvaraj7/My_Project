@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Role</title>
+    <link rel="stylesheet" href="{% static 'mainpage/css/main.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo" ><a href="admin">ATHLETE</a></h1>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a class="btn-login" href="{% url 'athlete' %}">Login</a>
+            
+        </nav>
+    </header>
+    
+    <div class="fst-container">
+        <video id="video" autoplay muted loop>
+            <source src="{% static 'mainpage/images/ball.mp4' %}" type="video/mp4" alt="Video">
+        </video>
+        
+        <vidqeo id="video" autoplay muted loop>
+            <source src="{% static 'mainpage/images/jogging.mp4' %}" type="video/mp4">
+        <video> 
+        
+    </div>
+    <div class="mid">
+        <div class="role-card">
+            <p>{{firstnames}}</p> 
+        </div>
+        <div class="role-card">
+            <p>is</p>
+        </div>
+    </div>
+</body>
+
+<!--<body>-->
+<!--    <div class="bg">-->
+<!--        <div class="container">-->
+<!--            <div class="role-selection">-->
+<!--                <a href="admin" class="role-card">-->
+<!--                    <img src="{% static 'mainpage/images/admin.jpg' %}" alt="Admin">-->
+<!--                    <h2>Admin</h2>-->
+<!--                </a>-->
+<!--                <a href="{% url 'athlete' %}" class="role-card">-->
+<!--                    <img src="{% static 'mainpage/images/athlete.jpg' %}" alt="Athlete">-->
+<!--                    <h2>Athlete</h2>-->
+<!--                </a>-->
+<!--&lt;!&ndash;                <a href="" class="role-card">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="{% static 'coachpage/image/coach.jpg' %}" alt="Coach">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h2>Coach</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <h1>Select Your Role</h1>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</body>-->
+

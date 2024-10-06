@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'athletepage/css/signup.css' %}">
+</head>
+<body>
+<!--     <header>-->
+<!--        <h1 class="logo">Athlete Health</h1>-->
+<!--        <nav class="navigation">-->
+<!--            <a href="#">Home</a>-->
+<!--            <a href="#">About</a>-->
+<!--            <a href="#">Service</a>-->
+<!--        </nav>-->
+<!--    </header>-->
+     <div class="container">
+
+         <div class="img">
+
+         </div>
+        <div id="signup-section" class="form-section">
+            <h2>Sign Up</h2>
+            <form id="registerForm" method="POST">
+                {% csrf_token %}
+                {% if messages %}
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                {% endif %}
+                <div class="input-container">
+                    <input type="text" id="first_name" name="firstname" required>
+                    <label for="first_name">First Name</label>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="last_name" name="lastname" required>
+                    <label for="last_name">Last Name</label>
+                    <div class="underline"></div>
+                </div>
+                 <div class="input-container">
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Username</label>
+                    <div class="underline"></div>
+                </div>
+                 <div class="input-container">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                    <div class="underline"></div>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p class="message">Already registered? <a href="{% url 'signin' %}">Login</a></p>
+            </form>
+        </div>
+      </div>
+
+</body>
+</html>

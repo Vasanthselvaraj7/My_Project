@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>pdf</title>
+    <link rel="stylesheet" href="{% static 'athletepage/css/pdf.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form method='GET'>
+            <p>Welcome Athlete</p>
+            <p>Name: {{firstname}}</p>
+            <table border="1">
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Heart Rate</td>
+                    <td>{{ heartrate }} bhm</td>
+                </tr>
+                <tr>
+                    <td>Blood Pressure</td>
+                    <td>{{ blood_pressure }}</td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td>{{ Temperature }}</td>
+                </tr>
+                <tr>
+                    <td>Time stamp</td>
+                    <td class="date">{{ date_and_time }}</td>
+                </tr>
+            </table>
+            <img src="{% static 'athletepage/image/athlete.jpg' %}" alt="image varala">
+        </form>
+    </div>
+</body>
+</html>

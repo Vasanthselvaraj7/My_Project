@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="{% static 'athletepage/css/signin.css'%}">
+</head>
+<body>
+<!--    <header>-->
+<!--        <h1 class="logo">Athlete Health</h1>-->
+<!--        <nav class="navigation">-->
+<!--            <a href="#">Home</a>-->
+<!--            <a href="#">About</a>-->
+<!--            <a href="#">Service</a>-->
+<!--        </nav>-->
+<!--    </header>-->
+
+    <div class="container">
+
+        <div class="img">
+
+        </div>
+        <!-- Sign In Section -->
+        <div id="signin-section" class="form-section">
+            <h2>Sign In</h2>
+            <form method="POST">
+                {% csrf_token %}
+                 {% if messages %}
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                 {% endif %}
+                <div class="input-container">
+                    <input type="text" id="signin-username" name="username" required>
+                    <label for="signin-username">Username</label>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="signin-password" name="password" required>
+                    <label for="signin-password">Password</label>
+                    <div class="underline"></div>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p class="message">New to Athlete Health? <a href="{% url 'signup' %}">Create an account</a></p>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

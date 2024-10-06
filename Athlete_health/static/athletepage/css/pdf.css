@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    color: blue;
+    background: url('/static/athletepage/image/back.jpg');
+}
+
+.date{
+    color: green;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athlete Portal</title>
+    <link rel="stylesheet" href="{% static 'athletepage/css/athlete.css' %}">
+</head>
+<body>
+    <header>
+        <h1 class="logo" ><a href="admin">ATHLETE</a></h1>
+        <nav class="navigation">
+            <a href="{% url 'main' %}">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+<!--            <a>{{firstnames}}</a>-->
+            <a class="btn-logout" href="{% url 'logout' %}">Logout</a>
+        </nav>
+    </header>
+    <div class="body-container">
+        <div class="container">
+            <h1>Welcome,</h1>
+            <h1>{{firstnames}}</h1>
+        </div>
+        <div class="input-container">
+            <div class="min">
+                <p>Information</p>
+                <p>{{last_activity}}</p>    
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div>
+                            <div class="input_container">
+                                <input type="number" placeholder="Heart rate" name="heartrate" required>
+        <!--                        <div class="underline"></div>-->
+                            </div>
+                            <div class="input_container">
+                                <input type="number" placeholder="Blood Pressure" name="blood_pressure" required>
+        <!--                        <div class="underline"></div>-->
+                            </div>
+                            <div class="input_container">
+                                <input type="number" placeholder="Temperature" name="Temperature" required>
+        <!--                        <div class="underline"></div>-->
+                            </div>
+                             <p>{{heartrate}}</p>
+                            <button type="submit" class="btn">Submit</button>
+                        </div>
+                        {% if messages %}
+                            {% for message in messages %}
+                            {{ message }}
+                            {% endfor %}
+                        {% endif %}
+                    </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
